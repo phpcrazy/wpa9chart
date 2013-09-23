@@ -1,0 +1,7 @@
+# Make sure directory listing is disabled
+#don't access folder
+Options +FollowSymLinks -Indexes
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
