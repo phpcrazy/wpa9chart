@@ -1,12 +1,12 @@
 {
 	"name": "wpa9/chart",
 	"require": {
-		"symfony/http-foundation": "2.4.*@dev",
-		"symfony/routing": "2.4.*@dev"
+		"silex/silex": "1.1.*@dev"
 		},
 	"autoload": {
 		"psr-0": {
-			"ChartLibrary\\": "src/"
+			"ChartLibrary\\": "src/Chart",
+			"App\\": "src/Core"
 		},
 		"classmap": [
 			"src/Loader"
