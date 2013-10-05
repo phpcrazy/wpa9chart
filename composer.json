@@ -6,7 +6,8 @@
 	"autoload": {
 		"psr-0": {
 			"ChartLibrary\\": "src/Chart",
-			"App\\": "src/Core"
+			"App\\": "src/Core",
+			"Controllers\\": "src/App"
 		},
 		"classmap": [
 			"src/Loader"
