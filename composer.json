@@ -11,7 +11,8 @@
 			"Controllers\\": "src/App"
 		},
 		"classmap": [
-			"src/Loader"
+			"src/Loader",
+			"models"
 		],
 		"files": [
 			"src/helpers.php"

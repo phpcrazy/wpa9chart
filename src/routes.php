@@ -5,6 +5,21 @@ $app->get('hello', '/hello');
 $app->get('bye', '/bye');
 */
 
+use Illuminate\Database\Capsule\Manager as DB;
+
+$app->get('/', function() use ($app) {
+	$user = DB::table('user')->get();
+	dump($user);
+	return "Hello from Home Page";
+
+});
+
+$app->get('/user', function() {
+	$user = User::get()->toArray();
+	dump($user);
+	return true;
+});
+
 $app->get('/hello/{name}', function ($name) use ($app) {
     return 'Hello '.$app->escape($name);
 });
