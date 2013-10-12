@@ -1,8 +1,10 @@
 <?php 
 return array(
 	'db'	=> array(
-		'name'			=> 'wpa9chart',
-		'host'			=> 'localhost',	
+		'host'			=> 'localhost',
+		'dbname'		=> 'wpa9chart',
+		'dbuser'		=> 'root',
+		'password'		=> 'mmlinks'
 		),
 	'dbname'	=> 'wpa9chart'
 	);

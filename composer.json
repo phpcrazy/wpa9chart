@@ -1,7 +1,8 @@
 {
 	"name": "wpa9/chart",
 	"require": {
-		"silex/silex": "1.1.*@dev"
+		"silex/silex": "1.1.*@dev",
+		"illuminate/database": "4.0.*@dev"
 		},
 	"autoload": {
 		"psr-0": {
