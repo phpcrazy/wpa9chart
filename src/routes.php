@@ -12,7 +12,13 @@ $app->get('/', function() use ($app) {
 	$user = DB::table('user')->get();
 	dump($user);
 	return "Hello from Home Page";
+});
 
+$app->get('/twig', function() use($app) {
+	$products = Models\Product::get()->toArray();
+	return $app['twig']->render('bar.twig', array(
+        'products' => $products,
+    ));
 });
 
 $app->get('/user', function() {

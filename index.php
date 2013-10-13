@@ -14,8 +14,17 @@ Database::initialize($db_setting);
 
 /* 
 Application Layer
+Start Silex Application
 */
 $app = new Silex\Application();
+
+/*
+Register Twig Template Engine
+*/
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
+    'twig.path' => __DIR__.'/views',
+));
+
 $app['debug'] = true;
 $app['VERSION'] = '1.0';
 

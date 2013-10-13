@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Twig</title>
+	<link rel="stylesheet" href="http://thiha.me/wpa9/wpa9chart/assets/css/bootstrap.min.css">
+</head>
+<body>
+	<table class="table">
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Quantity</td>
+			<td>Place</td>
+		</tr>
+	</thead>
+	<tbody>
+{% for product in products %}
+	<tr>
+		<td>{{ product.id }}</td>
+		<td>{{ product.name }}</td>
+		<td>{{ product.quantity }}</td>
+		<td>{{ product.place }}</td>
+	</tr>
+{% endfor %}
+</tbody>
+</table>
+	
+</body>
+</html>

@@ -30,6 +30,6 @@ class Config
 */
 
 return array(
-    'default_chart' => 'Line'
+    'default_chart' => 'Line',
     );
 ?>
