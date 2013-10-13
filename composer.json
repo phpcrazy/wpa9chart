@@ -8,11 +8,11 @@
 		"psr-0": {
 			"ChartLibrary\\": "src/Chart",
 			"App\\": "src/Core",
-			"Controllers\\": "src/App"
+			"Controllers\\": "src/App",
+			"Models\\": "src/db"
 		},
 		"classmap": [
-			"src/Loader",
-			"models"
+			"src/Loader"
 		],
 		"files": [
 			"src/helpers.php"

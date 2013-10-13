@@ -6,6 +6,7 @@ $app->get('bye', '/bye');
 */
 
 use Illuminate\Database\Capsule\Manager as DB;
+use \Models;
 
 $app->get('/', function() use ($app) {
 	$user = DB::table('user')->get();
@@ -15,8 +16,14 @@ $app->get('/', function() use ($app) {
 });
 
 $app->get('/user', function() {
-	$user = User::get()->toArray();
+	$user = Models\User::get()->toArray();
 	dump($user);
+	return true;
+});
+
+$app->get('/product', function() {
+	$product = Models\Product::get()->toArray();
+	dump($product);
 	return true;
 });
 

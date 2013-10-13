@@ -12,8 +12,8 @@ class Database {
 		static::$capsule = new DB;
 		static::$capsule->addConnection($db_setting);
 		static::$capsule->setEventDispatcher(new Dispatcher(new Container));
-		static::$capsule->setAsGlobal();
-		static::$capsule->bootEloquent();
+		static::$capsule->setAsGlobal(); // to available globally
+		static::$capsule->bootEloquent(); // boot Eloquent ORM
 	}
 
 }
