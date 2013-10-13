@@ -7,19 +7,10 @@ use Illuminate\Container\Container;
 
 class Database {
 	protected static $capsule = null;
-	public static function initialize()
+	public static function initialize($db_setting)
 	{
 		static::$capsule = new DB;
-		static::$capsule->addConnection([
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'wpa9chart',
-			'username'  => 'root',
-			'password'  => 'mmlinks',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-			]);
+		static::$capsule->addConnection($db_setting);
 		static::$capsule->setEventDispatcher(new Dispatcher(new Container));
 		static::$capsule->setAsGlobal();
 		static::$capsule->bootEloquent();

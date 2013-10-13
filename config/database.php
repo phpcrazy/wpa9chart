@@ -1,11 +1,14 @@
 <?php 
 return array(
-	'db'	=> array(
-		'host'			=> 'localhost',
-		'dbname'		=> 'wpa9chart',
-		'dbuser'		=> 'root',
-		'password'		=> 'mmlinks'
+	'db'=> array(
+		'driver'    => 'mysql',
+		'host'      => 'localhost',
+		'database'  => 'wpa9chart',
+		'username'  => 'root',
+		'password'  => 'mmlinks',
+		'charset'   => 'utf8',
+		'collation' => 'utf8_unicode_ci',
+		'prefix'    => '',
 		),
-	'dbname'	=> 'wpa9chart'
 	);
  ?>
